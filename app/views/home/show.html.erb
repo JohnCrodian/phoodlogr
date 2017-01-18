@@ -1,4 +1,11 @@
 <% @response.businesses.each do |restaurant| %>
 <p><%= restaurant.name %></p>
 <p><%= restaurant.phone %></p>
+<button>
+<%= form_tag '/restaurant/create' do %>
+	<%= hidden_field_tag :yelp_id, restaurant.id %> 
+	<%= hidden_field_tag :name, restaurant.name %> 
+	<%= hidden_field_tag :description, restaurant.snippet_text %>
+	<%= submit_tag "I went here", class: "btn" %>
+<% end %>
 <% end %>
