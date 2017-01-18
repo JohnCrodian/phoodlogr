@@ -2,10 +2,10 @@
 <p><%= restaurant.name %></p>
 <p><%= restaurant.phone %></p>
 <button>
-<%= form_tag 'restaurants/create' do %>
-	<%= hidden_field_tag :yelp_id, restaurant.id %> 
-	<%= hidden_field_tag :name, restaurant.name %> 
-	<%= hidden_field_tag :description, restaurant.snippet_text %>
-	<%= submit_tag "I went here", class: "btn" %>
+<%= form_for @restaurant do |f| %>
+	<%= f.hidden_field :yelp_id, value: restaurant.id %> 
+	<%= f.hidden_field :name, value: restaurant.name %> 
+	<%= f.hidden_field :description, value: restaurant.snippet_text %>
+	<%= f.submit "I went here", class: "btn" %>
 <% end %>
 <% end %>
