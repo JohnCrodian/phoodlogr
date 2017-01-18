@@ -13,3 +13,6 @@
  *= require_tree .
  *= require_self
  */
+.search-form {
+	padding-top: 30px;
+}
