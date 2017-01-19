@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170118175329) do
+ActiveRecord::Schema.define(version: 20170118220621) do
 
   create_table "add_favorites", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -31,7 +31,7 @@ ActiveRecord::Schema.define(version: 20170118175329) do
     t.text     "description"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
-    t.integer  "yelp_id"
+    t.string   "yelp_id"
     t.integer  "user_id"
   end
 
@@ -51,7 +51,7 @@ ActiveRecord::Schema.define(version: 20170118175329) do
     t.string   "fname"
     t.string   "lname"
     t.integer  "zipcode"
-    t.string   "restaurants"
+    t.string   "yelp_ids"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

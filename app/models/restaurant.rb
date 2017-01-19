@@ -1,6 +1,6 @@
 class Restaurant < ApplicationRecord
 
-	 attr_accessor :yelp_id, :name, :description
+	 # attr_accessor :yelp_id, :name, :description
 	# def new
 	# 	@restaurant = Restaurant.new
 	# end
