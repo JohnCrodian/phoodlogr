@@ -5,7 +5,6 @@
 <%= form_for @restaurant do |f| %>
 	<%= f.hidden_field :yelp_id, :value => restaurant.id %> 
 	<%= f.hidden_field :name, :value => restaurant.name %> 
-	
 	<%= f.submit "I went here", class: "btn" %>
 <% end %>
 <% end %>
