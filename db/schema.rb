@@ -10,13 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170119150204) do
+ActiveRecord::Schema.define(version: 20170119200346) do
 
   create_table "add_favorites", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string   "yelp_ids"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
     t.integer  "user_id"
+    t.integer  "restaurant_id"
   end
 
   create_table "posts", force: :cascade do |t|
