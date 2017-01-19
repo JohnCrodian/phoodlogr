@@ -1,3 +1,4 @@
+
 <% @response.businesses.each do |restaurant| %>
 <p><%= restaurant.name %></p>
 <p><%= restaurant.phone %></p>
@@ -8,3 +9,22 @@
 	<%= f.submit "I went here", class: "btn" %>
 <% end %>
 <% end %>
+
+<div>
+	<% @response.businesses.each do |restaurant| %>
+	<p><%= restaurant.name %></p>
+	<p><%= restaurant.phone %></p>
+	<%= form_for @restaurant do |f| %>
+	<%= f.hidden_field :yelp_id, :value => restaurant.id %>
+	<%= f.hidden_field :name, :value => restaurant.name %>
+
+	<%= f.submit "I went here", class: "btn btn-default",id: "modal" %>
+	<% end %>
+	<!-- <div id="modal">
+		<h3 id="review">Leave A Review</h3>
+	</div> -->
+	<% end %>
+</div>
+
+<%= render 'modal' %>
+
