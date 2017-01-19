@@ -6,7 +6,7 @@ api_host = 'api.yelp.com'
 
 consumer = OAuth::Consumer.new('YELP_CONSUMER_KEY', 'YELP_CONSUMER_SECRET_KEY', {:site => "http://#{api_host}"})
 
-path = "/v2/search?term=restaurant&location=new%20york"
+path = "/v2/search"
 
 access_token = OAuth::AccessToken.new(consumer, 'YELP_TOKEN', 'YELP_TOKEN_SECRET')
 
