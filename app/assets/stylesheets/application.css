@@ -13,6 +13,64 @@
  *= require_tree .
  *= require_self
  */
+ @import "stylesheets/layout.sass";
+ @import "bootstrap";
+
 .search-form {
-	padding-top: 30px;
+	padding-top: 40px;
+	float: left;
+}
+
+
+.nav {
+    color: #191919;
+
+}
+
+.nav ul {
+  list-style: none;
+  background-color: #444444;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+.nav li {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.2em;
+  line-height: 50px;
+  height: 50px;
+  border-bottom: 1px solid #888;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  transition: .3s background-color;
+}
+
+.navbar-brand{
+
+	color: black;
+
+}
+
+.field{
+	color: black;
+}
+
+form{
+	padding-top: 40px
+}
+
+.img-responsive {
+	height: 195px;
+	width: 195px;
+
+}
+
+.company-name {
+	font-family: 'Ultra', serif;
+	color: black;
 }
