@@ -9,6 +9,7 @@ class RestaurantsController < ApplicationController
 		@restaurant = Restaurant.new(restaurant_params)
 		@restaurant.yelp_id = params[:restaurant][:yelp_id]
 		@restaurant.name = params[:restaurant][:name]
+		@restaurant.user_id = @user.id
 		AddFavorite.create(user_id: @user.id, yelp_ids: @restaurant.yelp_id)
 		@restaurant.save
 		redirect_to '/'

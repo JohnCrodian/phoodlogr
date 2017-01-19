@@ -16,7 +16,8 @@ class Restaurant < ApplicationRecord
  #    redirect_to products_path
  #  end
 
-  belongs_to :user
+  has_many :add_favorites
+  has_many :users, through: :add_favorites
 
   #   def self.save_data_from_api
     
