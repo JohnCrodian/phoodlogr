@@ -1,2 +1,27 @@
-<h1>Profiles#show</h1>
-<p>Find me in app/views/profiles/show.html.erb</p>
+<div class="container-fluid">
+
+	<div class="row">
+		<div class="col-md-12">
+			<div class="text-bg">
+
+			<h1>Hello <%= current_user.fname %>!</h1>
+
+
+			<% if current_user %>
+
+				<h2>My info:</h2>
+				<%= current_user.fname %>
+				<%= current_user.lname %>
+				<br>
+				<%= current_user.email %>
+				<br>
+			
+						
+					<% end %>
+
+<button class="btn"><a href=<%= '/users/edit' %>>Edit Your Profile</a></button>
+
+</div>
+</div>
+</div>
+</div>
