@@ -24,5 +24,7 @@ root 'home#index'
 
 get '/v2/search', to: 'home#show'
 
+resources :restaurants
+
 
 end
