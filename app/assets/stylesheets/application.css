@@ -13,6 +13,9 @@
  *= require_tree .
  *= require_self
  */
+ @import "stylesheets/layout.sass";
+ @import "bootstrap";
+
 .search-form {
 	padding-top: 40px;
 	float: left;
@@ -21,7 +24,7 @@
 
 .nav {
     color: #191919;
-  
+
 }
 
 .nav ul {
