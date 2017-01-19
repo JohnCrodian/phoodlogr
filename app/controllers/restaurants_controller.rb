@@ -12,7 +12,6 @@ class RestaurantsController < ApplicationController
 		@restaurant.user_id = @user.id
 		@restaurant.save
 		AddFavorite.create(user_id: @user.id, restaurant_id: @restaurant.id)
-
 		redirect_to '/'
 	end
 

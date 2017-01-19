@@ -10,23 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20170119150856) do
 
-  create_table "add_favorites", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string   "yelp_ids"
-    t.integer  "user_id"
-=======
-ActiveRecord::Schema.define(version: 20170119200346) do
+ActiveRecord::Schema.define(version: 20170119150856) do
 
   create_table "add_favorites", force: :cascade do |t|
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
     t.integer  "user_id"
     t.integer  "restaurant_id"
->>>>>>> 6ea6a68ca1f4927cd2d33cb7d8a2eb58dec50474
   end
 
   create_table "posts", force: :cascade do |t|
@@ -67,5 +58,10 @@ ActiveRecord::Schema.define(version: 20170119200346) do
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
+
+end
+
+#
+
 
 end
