@@ -15,8 +15,10 @@
 				<%= current_user.email %>
 				<br>
 
-				<%= current_user.restaurants.last.name %>
-				<%= current_user.restaurants.last.posts %>
+				<%= current_user.restaurants.all.last.name %>
+				<%= current_user.restaurants.all.last.posts %>
+				<%= image_tag @lastfavorite.image.url %>
+
 				<% end %>
 
 				<button class="btn"><a href=<%= '/users/edit' %>>Edit Your Profile</a></button>

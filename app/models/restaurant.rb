@@ -19,9 +19,7 @@ class Restaurant < ApplicationRecord
   belongs_to :user
   has_many :add_favorites
   has_many :users, through: :add_favorites
-  has_attached_file :image
 
-  validates_attachment_content_type :image, content_type: /\Aimage\/.*\z/
   #   def self.save_data_from_api
 
   #   response = Yelp.client.search.id("nooddi-thai-chef-glen-mills")
