@@ -7,6 +7,7 @@ def show
 	parameters = { term: params[:search], limit: 20}
 	@response = Yelp.client.search(userzip, parameters)
 	@restaurant = Restaurant.new
+	@fulldiary = current_user.restaurants
 	end
 
 	def index

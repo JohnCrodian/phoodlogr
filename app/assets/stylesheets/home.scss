@@ -3,24 +3,50 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .restaurant-card {
+	font-family: 'Ultra', serif;
 	display: inline-block;
-	background-color: white;
-	width: 150px;
-	height: 275px;
-	content: center;
+	width: 275px;
+	height: 250px;
+	align: center;
 	float: left;
 	border: 1px solid black;
 	border-radius: 5px;
+	border-inset: 20%;
 	margin: 5px;
 	padding: 5px;
 }
 
 .search-results {
-	width: 750px;
+	width: 900px;
 	margin-left:  auto;
 	margin-right: auto;
 }
 
 .header-clear {
 	height: 200px;
+}
+
+
+.makepostbutton {
+	font-family: sans-serif;
+	margin-top: 10%;
+}
+
+#post-area {
+	height: 400px;
+	width: 650px;
+}
+
+.fulldiary {
+	
+}
+
+.diary-entry {
+	border: 2px solid black;
+}
+
+.diary-attribute {
+	float: left;
+	display: inline-block;
+
 }

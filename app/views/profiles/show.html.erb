@@ -15,9 +15,36 @@
 				<%= current_user.email %>
 				<br>
 
-				<%= current_user.restaurants.last.name %>
-				<%= current_user.restaurants.last.posts %>
-				<% end %>
+
+					<% end %>
+<div class="fulldiary">
+<% current_user.restaurants.each do |entry| %>
+
+
+<div class="col-sm-6 col-md-6 col-xs-6" style="border-width: 2px; border-radius: 5px; border-style: solid; border-color: #286090; margin: 5px; ">
+	
+              <div class="thumbnail" style="border:none; background:white;">
+
+              <div class="col-sm-6 col-md-6 col-xs-12 image-container">
+                <img src= <%= entry.avatar %> style="border-radius: 20px; height:200px; margin-left:-100px; margin-right: auto" />
+              </div>
+             
+
+              <div class="col-sm-6 col-md-6 col-xs-12">  
+</div>
+                <h4><%= entry.name %>, <%= entry.date_visited %></h4>
+                 <p style= "text-align:justify ;font-size:12pt; color:#03225C;"> <%= entry.posts %>  </p>
+              </div>
+              </div>
+
+ 
+ </div>
+ <% end %>
+</div>
+
+
+
+
 
 				<button class="btn"><a href=<%= '/users/edit' %>>Edit Your Profile</a></button>
 

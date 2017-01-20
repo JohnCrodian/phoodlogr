@@ -4,16 +4,16 @@
   <div class="modal-content">
     <span class="close" data-dismiss="modal">x</span>
     <div class="modal-form">
-      <h2>How Was It?!</h2>
-      <%= restaurant.id %>
-      <%= form_for @restaurant do |f| %>
-      <%= f.text_field :posts %>
-      <%= f.hidden_field :yelp_id, :value => restaurant.id %>
-      <%= f.hidden_field :name, :value => restaurant.name %>
-      <%= f.label "Upload an image" %>
-      <%= f.file_field :image %>
-      <%= f.submit "Submit", class: "btn btn-default" %>
-      <% end %>
+      <h2>You went to <%= restaurant.name %></h2>.
+      <h2>How was it?</h2>
+    <%= form_for @restaurant do |f| %>
+	<%= f.text_area :posts, :id => "post-area" %><br>
+	<p>When did you go?</p><%= f.date_select :date_visited %>
+	<%= f.hidden_field :yelp_id, :value => restaurant.id %>
+	<%= f.hidden_field :name, :value => restaurant.name %>
+	<%= f.hidden_field :avatar, :value => restaurant.image_url %>
+	<%= f.submit "Submit", class: "btn btn-default" %>
+<% end %>
     </div>
   </div>
 </div>
