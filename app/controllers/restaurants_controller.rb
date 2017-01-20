@@ -1,5 +1,5 @@
 class RestaurantsController < ApplicationController
-	
+
 	def new
 		@restaurant = Restaurant.new(restaurant_params)
 	end
@@ -22,4 +22,3 @@ def restaurant_params
     params.require(:restaurant).permit(:yelp_id, :name, :user_id)
 end
 end
-

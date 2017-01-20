@@ -6,6 +6,8 @@ git_source(:github) do |repo_name|
 end
 gem 'paperclip'
 gem 'devise'
+gem 'bootstrap_form'
+gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.1'
 # Use sqlite3 as the database for Active Record
@@ -36,7 +38,6 @@ gem 'yelp', require: 'yelp'
 # gem 'capistrano-rails', group: :development
 
 gem 'oauth', '~> 0.5.1'
-gem 'devise'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri

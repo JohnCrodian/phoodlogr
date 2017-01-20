@@ -13,6 +13,8 @@
  *= require_tree .
  *= require_self
  */
+
+
 .search-form {
 	padding-top: 40px;
 	float: left;
@@ -21,7 +23,7 @@
 
 .nav {
     color: #191919;
-  
+
 }
 
 .nav ul {
