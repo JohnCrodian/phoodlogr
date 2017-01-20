@@ -15,6 +15,10 @@ class RestaurantsController < ApplicationController
 		redirect_to '/'
 	end
 
+	def show
+		@restaurant = Restaurant.all
+	end
+
 
 private
 
