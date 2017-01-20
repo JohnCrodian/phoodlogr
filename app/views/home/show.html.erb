@@ -1,20 +1,21 @@
 <div class="header-clear">
 </div>
-<div class="search-results"
+<div class="search-results">
 	<% @response.businesses.each do |restaurant| %>
+	<div class="restaurant-card">
 	<p><%= restaurant.name %></p>
 	<p><%= restaurant.phone %></p>
+	<img src= <%= restaurant.image_url %> > </img>
 	<%= form_for @restaurant do |f| %>
 	<%= f.hidden_field :yelp_id, :value => restaurant.id %>
 	<%= f.hidden_field :name, :value => restaurant.name %>
 
 	<%= f.submit "I went here", class: "btn btn-default",id: "modal" %>
+	<% end %>
 	</div>
 	<% end %>
-	<!-- <div id="modal">
-		<h3 id="review">Leave A Review</h3>
-	</div> -->
-	<% end %>
-</div>
+	
+	</div>
+
 
 <%= render 'modal' %>
