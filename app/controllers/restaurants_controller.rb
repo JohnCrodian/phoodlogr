@@ -19,6 +19,6 @@ class RestaurantsController < ApplicationController
 private
 
 def restaurant_params
-    params.require(:restaurant).permit(:yelp_id, :name, :user_id)
+    params.require(:restaurant).permit(:yelp_id, :posts, :name, :user_id)
 end
 end

@@ -1,12 +1,19 @@
 <!-- The Modal -->
-<div id="myModal" class="modal">
+<% @response.businesses.each do |restaurant| %>
+<div id="<%= restaurant.id %>" class="modal">
   <!-- Modal content -->
   <div class="modal-content">
-    <span class="close">x</span>
+    <span class="close" data-dismiss="modal">x</span>
     <div class="modal-form">
       <h2>How Was It?!</h2>
-      form_for 
-
+      <%= restaurant.id %>
+    <%= form_for @restaurant do |f| %>
+	<%= f.text_field :posts %>
+	<%= f.hidden_field :yelp_id, :value => restaurant.id %>
+	<%= f.hidden_field :name, :value => restaurant.name %>
+	<%= f.submit "Submit", class: "btn btn-default" %>
+<% end %>
     </div>
   </div>
 </div>
+<% end %>

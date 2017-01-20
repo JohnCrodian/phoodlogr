@@ -15,8 +15,9 @@
 				<br>
 				<%= current_user.email %>
 				<br>
-			
-						
+
+			<%= current_user.restaurants.last.name %>
+			<%= current_user.restaurants.last.posts %>	
 					<% end %>
 
 <button class="btn"><a href=<%= '/users/edit' %>>Edit Your Profile</a></button>
