@@ -1,15 +1,14 @@
 <div class="header-clear">
 </div>
+
 <div class="search-results">
 	<% @response.businesses.each do |restaurant| %>
 	<div class="restaurant-card">
 		<p><%= restaurant.name %></p>
 		<p><%= restaurant.phone %></p>
-		<img src= <%= restaurant.image_url %> ></img>
-		<button id="modal" data-target="<% restaurant.id %>">Write A Review</button>
-
-		<%= render 'modal' %>
-
+		<img src= <%= restaurant.image_url %> > </img><br>
+		<button id="modal" data-toggle="modal" data-target="#<%= restaurant.id %>"> Leave A Review</button>
 	</div>
 	<% end %>
-</div>
+	
+	<%= render 'modal' %>
