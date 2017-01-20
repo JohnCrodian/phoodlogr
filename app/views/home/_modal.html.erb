@@ -10,6 +10,8 @@
       <%= f.text_field :posts %>
       <%= f.hidden_field :yelp_id, :value => restaurant.id %>
       <%= f.hidden_field :name, :value => restaurant.name %>
+      <%= f.label "Upload an image" %>
+      <%= f.file_field :image %>
       <%= f.submit "Submit", class: "btn btn-default" %>
       <% end %>
     </div>

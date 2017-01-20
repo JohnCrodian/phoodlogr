@@ -11,7 +11,7 @@ class RestaurantsController < ApplicationController
 		@restaurant.name = params[:restaurant][:name]
 		@restaurant.user_id = @user.id
 		@restaurant.save
-		AddFavorite.create(user_id: @user.id, restaurant_id: @restaurant.id)
+		AddFavorite.create(user_id: @user.id, restaurant_id: @restaurant.id, image:params[:restaurant][:image])
 		redirect_to '/'
 	end
 
@@ -23,6 +23,6 @@ class RestaurantsController < ApplicationController
 private
 
 def restaurant_params
-    params.require(:restaurant).permit(:yelp_id, :posts, :name, :user_id)
+    params.require(:restaurant).permit(:yelp_id, :posts, :name, :user_id,)
 end
 end

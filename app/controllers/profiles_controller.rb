@@ -1,5 +1,6 @@
 class ProfilesController < ApplicationController
   def show
+    @restaurant = Restaurant.all
   end
 
   def index
