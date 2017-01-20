@@ -15,7 +15,7 @@
 
   </head>
 
-  <body>
+    <body>
   <div class="container-fluid main-container">
     <div class="nav nav-bar main-nav navbar-fixed top">
       <div class="nav-brand">
@@ -40,14 +40,11 @@
 <%= form_tag('/v2/search', :method => "get", id: "search-form") do %>
        <%= text_field_tag :search, params[:search], placeholder: "Search Restaurants" %>
        <%= submit_tag "Search", :name => nil %>
-</div>  
-
-  
-
+</div>     
 
 <% end %>
-    <% end %>      
 
+    <% end %>        
 
 
     
@@ -61,8 +58,9 @@
               <li><a href=<%= '/users/sign_in' %>>Sign In</a></li>
             </ul>
 <% end %>
- 
-  
+      </div>
+      </div>  
+
  <% if notice %>
   <p class="alert alert-success"><%= notice %></p>
 <% end %>
@@ -71,23 +69,16 @@
       
      <% end %> 
 
-
-
  <% if notice %>
   <p class="alert alert-success"><%= notice %></p>
 <% end %>
 
 <% if alert %>
   <p class="alert alert-danger"><%= alert %></p>
-  </div>
-  </div>
 
 <% end %>
 
-
-
     <%= yield %>
-
 
   </body>
 </html>
