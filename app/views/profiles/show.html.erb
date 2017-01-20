@@ -17,8 +17,22 @@
 				<br>
 
 			<%= current_user.restaurants.last.name %>
-			<%= current_user.restaurants.last.posts %>	
+			<%= current_user.restaurants.last.posts %>
+			<%= current_user.restaurants.last.created_at %>	
+			<img src= <%= current_user.restaurants.last.avatar %> > </img>
 					<% end %>
+<div class="fulldiary">
+<% current_user.restaurants.each do |entry| %>
+<ul class="diary-entry">
+	<li class="diary-attribute"> <%= entry.date_visited %> </li>
+	<li class="diary-attribute"> <%= entry.name %> </li>
+	<li class="diary-attribute"><img src=<%= entry.avatar %> > </img> </li>
+	<li class="diary-attribute"> <%= entry.posts %>  </li>	
+</ul>
+
+<% end %>
+</div>
+
 
 <button class="btn"><a href=<%= '/users/edit' %>>Edit Your Profile</a></button>
 

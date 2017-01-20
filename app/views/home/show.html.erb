@@ -5,9 +5,10 @@
 	<% @response.businesses.each do |restaurant| %>
 	<div class="restaurant-card">
 	<p><%= restaurant.name %></p>
-	<p><%= restaurant.phone %></p>
-	<img src= <%= restaurant.image_url %> > </img>
+	<img src= <%= restaurant.image_url %> > </img><br>
+	<div class="makepostbutton">
 	<button id="modal" data-toggle="modal" data-target="#<%= restaurant.id %>"> Leave A Review</button>
+	</div>
 	</div>
 	<% end %>
 

@@ -9,6 +9,7 @@ class RestaurantsController < ApplicationController
 		@restaurant = Restaurant.new(restaurant_params)
 		@restaurant.yelp_id = params[:restaurant][:yelp_id]
 		@restaurant.name = params[:restaurant][:name]
+		@restaurant.avatar = params[:restaurant][:avatar]
 		@restaurant.user_id = @user.id
 		@restaurant.save
 		AddFavorite.create(user_id: @user.id, restaurant_id: @restaurant.id)
@@ -19,6 +20,6 @@ class RestaurantsController < ApplicationController
 private
 
 def restaurant_params
-    params.require(:restaurant).permit(:yelp_id, :posts, :name, :user_id)
+    params.require(:restaurant).permit(:yelp_id, :posts, :date_visited, :avatar, :name, :user_id)
 end
 end
