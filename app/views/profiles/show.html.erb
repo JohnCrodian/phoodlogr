@@ -1,13 +1,12 @@
 <div class="container-fluid">
-
 	<div class="row">
 		<div class="col-md-12">
 			<div class="text-bg">
 
-			<h1>Hello <%= current_user.fname %>!</h1>
+				<h1>Hello <%= current_user.fname %>!</h1>
 
 
-			<% if current_user %>
+				<% if current_user %>
 
 				<h2>My info:</h2>
 				<%= current_user.fname %>
@@ -16,13 +15,13 @@
 				<%= current_user.email %>
 				<br>
 
-			<%= current_user.restaurants.last.name %>
-			<%= current_user.restaurants.last.posts %>	
-					<% end %>
+				<%= current_user.restaurants.last.name %>
+				<%= current_user.restaurants.last.posts %>
+				<% end %>
 
-<button class="btn"><a href=<%= '/users/edit' %>>Edit Your Profile</a></button>
+				<button class="btn"><a href=<%= '/users/edit' %>>Edit Your Profile</a></button>
 
-</div>
-</div>
-</div>
+			</div>
+		</div>
+	</div>
 </div>
