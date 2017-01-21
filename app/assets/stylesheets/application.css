@@ -16,7 +16,6 @@
 
 
 .search-form {
-	padding-top: 40px;
 	float: left;
 }
 
@@ -27,11 +26,12 @@
 }
 
 .nav ul {
+  float: right;
   list-style: none;
   background-color: #444444;
   text-align: center;
   padding: 0;
-  margin: 0;
+  margin: 25px;
 }
 
 .nav li {
@@ -71,5 +71,5 @@ form{
 
 .company-name {
 	font-family: 'Ultra', serif;
-	color: black;
+	color: white;
 }
