@@ -3,6 +3,7 @@ class ProfilesController < ApplicationController
   def show
     @favorite = AddFavorite.where(user_id: current_user.id)
     @lastfavorite = @favorite.last
+    @user_restaurants = current_user.restaurants.order(id: :desc).take(3)
   end
 
   def index
