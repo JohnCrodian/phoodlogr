@@ -1,6 +1,8 @@
 class ProfilesController < ApplicationController
+
   def show
-    @restaurant = Restaurant.all
+    @favorite = AddFavorite.where(user_id: current_user.id)
+    @lastfavorite = @favorite.last
   end
 
   def index

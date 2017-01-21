@@ -15,18 +15,17 @@
 				<%= current_user.email %>
 				<br>
 
-<%= current_user.restaurants.group('name').order('count(*)').limit(1).pluck(:name).last %>
 
-					<% end %>
-
-
+				<% end %>
+				
 
 
 
 
-				<button class="btn"><a href=<%= '/users/edit' %>>Edit Your Profile</a></button>
 
-			</div>
+			<button class="btn"><a href=<%= '/users/edit' %>>Edit Your Profile</a></button>
+
 		</div>
 	</div>
+</div>
 </div>

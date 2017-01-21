@@ -10,7 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20170120194357) do
+=======
+ActiveRecord::Schema.define(version: 20170120190722) do
+>>>>>>> paul
 
   create_table "add_favorites", force: :cascade do |t|
     t.datetime "created_at",         null: false
@@ -40,16 +44,11 @@ ActiveRecord::Schema.define(version: 20170120194357) do
     t.string   "name"
     t.string   "avatar"
     t.text     "description"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
     t.string   "yelp_id"
     t.integer  "user_id"
     t.text     "posts"
-    t.date     "date_visited"
-    t.string   "image_file_name"
-    t.string   "image_content_type"
-    t.integer  "image_file_size"
-    t.datetime "image_updated_at"
   end
 
   create_table "users", force: :cascade do |t|
