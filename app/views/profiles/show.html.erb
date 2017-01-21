@@ -3,8 +3,8 @@
 		<div class="col-md-12">
 			<div class="text-bg">
 
-				<h1>Hello <%= current_user.fname %>!</h1>
 
+				<h1>Hello <%= current_user.fname %>!</h1>
 
 				<% if current_user %>
 
@@ -17,15 +17,15 @@
 
 
 				<% end %>
-				
+			
+			<%= current_user.restaurants.restaurant_id	%>
 
-
-
-
-
+		
 			<button class="btn"><a href=<%= '/users/edit' %>>Edit Your Profile</a></button>
+			<br>
 
 		</div>
+		<button class="btn"><a href=<%= '/profiles/index'%>>View All Your Posts</a>	
 	</div>
 </div>
 </div>
