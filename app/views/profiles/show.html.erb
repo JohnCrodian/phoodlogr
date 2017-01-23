@@ -1,3 +1,4 @@
+
 <div class="container-fluid">
 	<div class="row">
 		<div class="col-md-12">
@@ -19,31 +20,31 @@
 				<% end %>
 
 
-			<%= @user_restaurants.each do |entry| %>
-			<div class="col-sm-6 col-md-6 col-xs-6" style="border-width: 2px; border-radius: 5px; border-style: solid; border-color: #286090; margin-top: 10px; margin-left:300px; margin-right:300px; ">
-	
-              <div class="thumbnail" style="border:none; background:white;">
+				<%= @user_restaurants.each do |entry| %>
+				<div class="col-sm-6 col-md-6 col-xs-6" style="border-width: 2px; border-radius: 5px; border-style: solid; border-color: #286090; margin-top: 10px; margin-left:300px; margin-right:300px; ">
 
-              <div class="col-sm-6 col-md-6 col-xs-12 image-container">
-                <img src= <%= entry.avatar %> style="border-radius: 20px; height:200px; margin-left:-100px; margin-right: auto" />
-              </div>
-             
+					<div class="thumbnail" style="border:none; background:white;">
 
-              <div class="col-sm-6 col-md-6 col-xs-12">  
-</div>
-                <h4><%= entry.name %>, <%= entry.date_visited %></h4>
-                 <p style= "text-align:justify ;font-size:12pt; color:#03225C;"> <%= entry.posts %>  </p>
-              </div>
-              </div>
+						<div class="col-sm-6 col-md-6 col-xs-12 image-container">
+							<img src= <%= entry.avatar %> style="border-radius: 20px; height:200px; margin-left:-100px; margin-right: auto" />
+						</div>
 
-			<% end %>
 
-		
-			<button class="btn"><a href=<%= '/users/edit' %>>Edit Your Profile</a></button>
-			<br>
+						<div class="col-sm-6 col-md-6 col-xs-12">
+						</div>
+						<h4><%= entry.name %>, <%= entry.date_visited %></h4>
+						<p style= "text-align:justify ;font-size:12pt; color:#03225C;"> <%= entry.posts %>  </p>
+					</div>
+				</div>
 
+				<% end %>
+
+
+				<button class="btn"><a href=<%= '/users/edit' %>>Edit Your Profile</a></button>
+				<br>
+
+			</div>
+			<button class="btn"><a href=<%= '/profiles/index'%>>View All Your Posts</a>
+			</div>
 		</div>
-		<button class="btn"><a href=<%= '/profiles/index'%>>View All Your Posts</a>	
 	</div>
-</div>
-</div>
